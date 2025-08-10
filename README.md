@@ -459,7 +459,7 @@ node scheduler.js
 
 This process will check for scheduled messages every minute and send them when due by calling the internal `/api/slack/scheduler` endpoint.
 
-## 🧪 Testing the Application
+##  Testing the Application
 
 Once the application is set up and running, you can test its core functionalities:
 
@@ -496,7 +496,7 @@ Once the application is set up and running, you can test its core functionalitie
 -   Click the "Disconnect" button next to it.
 -   Verify that the workspace is removed from your list, and any associated scheduled messages are also removed.
 
-## 🚀 Deployment
+##  Deployment
 
 Deploying Slack Connect involves deploying both the Next.js application (frontend and API routes) and ensuring the scheduler service runs continuously.
 
