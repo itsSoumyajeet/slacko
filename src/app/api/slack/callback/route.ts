@@ -11,13 +11,13 @@ export async function GET(request: NextRequest) {
   
   if (error) {
     console.error('OAuth error from Slack:', error);
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://preview-chat-ecc23c12-0dcb-4950-bc2c-8ce71a637cca.space.z.ai';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
     return NextResponse.redirect(new URL(`${baseUrl}/?error=${encodeURIComponent(error)}`, baseUrl));
   }
   
   if (!code || !state) {
     console.error('Missing required parameters:', { code, state });
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://preview-chat-ecc23c12-0dcb-4950-bc2c-8ce71a637cca.space.z.ai';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
     return NextResponse.redirect(new URL(`${baseUrl}/?error=missing_params`, baseUrl));
   }
   
