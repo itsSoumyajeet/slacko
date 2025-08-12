@@ -354,8 +354,8 @@ The application exposes a set of RESTful API endpoints built with Next.js API Ro
 
 ##  Prerequisites
 
--   Node.js 18+ 
--   npm or yarn
+-   Node.js 18+
+-   npm
 -   Slack App credentials (Client ID and Client Secret)
 
 ##  Setup Instructions
@@ -447,11 +447,16 @@ Open [http://localhost:3000](http://localhost:3000) to view the application. (If
 
 ### 7. Start the Scheduler
 
-Run the scheduler in a **separate terminal** (it'll check for scheduled messages every minute and sent them when they're due. (by calling the internal `/api/slack/scheduler` endpoint.)
+Run the scheduler in a separate terminal (it'll check for scheduled messages every minute and sent them when they're due. (by calling the internal `/api/slack/scheduler` endpoint.)
 
 ```bash
 node scheduler.js
 ```
+### NOTE:
+The bot needs to be a member of channels. For Each Missing Channel:
+1. Go to the channel
+2. Type: /invite @your-app-name
+3. Click "Add"
 
 ##  Testing the Application
 
@@ -461,7 +466,7 @@ After setting up the app:
 -   Go to "Workspaces" tab.
 -   Click "Connect Workspace".
 -   When redirected to Slack's authorization page, authorize the Slack app.
--   Verify that the workspace appears in your connected workspaces list on the dashboard.
+-   Verify that the workspace appears in connected workspaces list on the dashboard.
 
 ### 2. Sending an Immediate Message
 -   Go to the "Send Message" tab.
